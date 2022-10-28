@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Dijkstra
+﻿namespace Dijkstra
 {
     public class StepConstraint : IConstraint<CostDurationStepGraphData>
     {

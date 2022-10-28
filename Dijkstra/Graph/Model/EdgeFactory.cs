@@ -1,6 +1,4 @@
-﻿using Dijkstra.Graph.Model;
-
-namespace Dijkstra
+﻿namespace Dijkstra
 {
     public class EdgeFactory<T> : IEdgeFactory<T> where T : class, IGraphData, new()
     {
