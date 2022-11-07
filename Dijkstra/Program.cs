@@ -87,7 +87,7 @@
 					new CostDurationStepGraphData(-1, -1, -1),
 					new OrCompositeConstraint<CostDurationStepGraphData>(
 						new DurationConstraint(maxDuration),
-						new StepConstraint(maxSteps))));
+						new StepConstraint(maxSteps))).Cost);
 		}
 	}
 }
