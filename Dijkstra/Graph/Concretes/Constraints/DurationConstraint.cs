@@ -2,7 +2,7 @@
 
 namespace Dijkstra
 {
-    public class DurationConstraint : IConstraint<CostDurationStepGraphData>
+    public class DurationConstraint : IGraphConstraint<CostDurationStepGraphData>
     {
         protected int MaxDuration;
 

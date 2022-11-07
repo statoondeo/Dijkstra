@@ -11,7 +11,7 @@ namespace Dijkstra
         void Reset();
         IEdge<T> AddEdge(IEdge<T> edge);
         bool PerformEdge(IEdge<T> edge);
-        IList<IVertex<T>> Visit(IConstraint<T> constraint);
+        IList<IVertex<T>> Visit(IGraphConstraint<T> constraint);
     }
 }
 

@@ -13,7 +13,7 @@
         }
 
         public void SetOrigin(IVertex<T> origin) => Origin = origin ?? throw new ArgumentNullException(nameof(origin));
-        public bool Follow(IConstraint<T> constraint) => !constraint.IsConstrainted((T)Data.Add(Origin.Data)) && Target.PerformEdge(this);
+        public bool Follow(IGraphConstraint<T> constraint) => !constraint.IsConstrainted((T)Data.Add(Origin.Data)) && Target.PerformEdge(this);
     }
 }
 

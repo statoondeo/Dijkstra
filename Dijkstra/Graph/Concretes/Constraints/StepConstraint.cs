@@ -1,6 +1,6 @@
 ﻿namespace Dijkstra
 {
-    public class StepConstraint : IConstraint<CostDurationStepGraphData>
+    public class StepConstraint : IGraphConstraint<CostDurationStepGraphData>
     {
         protected int MaxSteps;
 

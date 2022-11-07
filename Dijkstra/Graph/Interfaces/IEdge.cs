@@ -6,7 +6,7 @@
         IVertex<T> Target { get; }
         T Data { get; }
 
-        bool Follow(IConstraint<T> constraint);
+        bool Follow(IGraphConstraint<T> constraint);
         void SetOrigin(IVertex<T> vertex);
     }
 }

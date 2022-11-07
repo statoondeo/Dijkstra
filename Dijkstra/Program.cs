@@ -4,7 +4,7 @@
 	{
 		static void Main(string[] args)
 		{
-			string line = @"20 111 8
+			string line = @"20 111 10
 0 1 17 18
 0 2 10 8
 1 2 8 14
@@ -57,8 +57,8 @@
 
 			// Vous pouvez aussi effectuer votre traitement ici après avoir lu toutes les données 
 			string[] paramLine = inputs[0].Split(" ");
-			int sourceNode = 0;
-			int targetNode = int.Parse(paramLine[0]);
+			int sourceVertex = 0;
+			int targetVertex = int.Parse(paramLine[0]);
 			int maxDuration = int.Parse(paramLine[1]);
 			int maxSteps = int.Parse(paramLine[2]);
 
@@ -82,13 +82,12 @@
 			// Résolution du chemin le moins couteux
 			Console.WriteLine(
 				graph.FindPath(
-					sourceNode,
-					targetNode,
+					sourceVertex,
+					targetVertex,
 					new CostDurationStepGraphData(-1, -1, -1),
 					new OrCompositeConstraint<CostDurationStepGraphData>(
-						new List<IConstraint<CostDurationStepGraphData>> {
-							new DurationConstraint(maxDuration),
-							new StepConstraint(maxSteps) })));
+						new DurationConstraint(maxDuration),
+						new StepConstraint(maxSteps))));
 		}
 	}
 }

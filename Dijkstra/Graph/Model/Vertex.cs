@@ -19,19 +19,19 @@
             Reset();
         }
 
-        public IList<IVertex<T>> Visit(IConstraint<T> constraint)
+        public IList<IVertex<T>> Visit(IGraphConstraint<T> constraint)
         {
             if (null == constraint) throw new ArgumentNullException(nameof(constraint));
 
-            IList<IVertex<T>> performedNodes = new List<IVertex<T>>();
-            IList<IEdge<T>> nodeEdges = Edges.Where(edge => !edge.Target.Visited).OrderBy(edge => edge.Data).ToList();
-            for (int i = 0; i < nodeEdges.Count; i++)
+            IList<IVertex<T>> performedVertices = new List<IVertex<T>>();
+            IList<IEdge<T>> vertexEdges = Edges.Where(edge => !edge.Target.Visited).OrderBy(edge => edge.Data).ToList();
+            for (int i = 0; i < vertexEdges.Count; i++)
             {
-                IEdge<T> currentEdge = nodeEdges[i];
-                if (currentEdge.Follow(constraint)) performedNodes.Add(currentEdge.Target);
+                IEdge<T> currentEdge = vertexEdges[i];
+                if (currentEdge.Follow(constraint)) performedVertices.Add(currentEdge.Target);
             }
             Visited = true;
-            return (performedNodes);
+            return (performedVertices);
         }
         public IEdge<T> AddEdge(IEdge<T> edge)
         {
