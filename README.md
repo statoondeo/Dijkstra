@@ -1,11 +1,6 @@
 <div id="question">
 <img class="main_image" src="https://questionsacm.isograd.com/codecontest/fr/ygYNuqYQe2A9u8EPeda4u.png" alt="Test">
 <div class="form-group inline  " style="padding:15px 0 0 15px;margin 0">
-<label>Texte de la question en :</label>
-<select onchange="ChangeQuestionTextDisplayLanguage();" id="txt_lan_id" name="txt_lan_id" class=" form-control">
-<option value="2">Anglais</option>
-<option value="1" selected="selected">Fran&ccedil;ais</option>
-</select>
 <div class="valid-feedback"><i class="fal fa-check-circle icon-right hide"></i></div>
 <div class="invalid-feedback"><i class="fal fa-times-circle icon-wrong hide"></i></div>
 </div>
